@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+    match /cvs/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+    match /documents/{docId} {
+      allow create: if signedIn() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if signedIn() && resource.data.userId == request.auth.uid;
+    }
+    match /consultations/{docId} {
+      allow create: if true;
+      allow read: if signedIn() && resource.data.userId == request.auth.uid;
+      allow update, delete: if false;
+    }
+    match /visaApplications/{docId} {
+      allow create: if true;
+      allow read: if signedIn() && resource.data.userId == request.auth.uid;
+      allow update, delete: if false;
+    }
+    match /appointments/{docId} {
+      allow create: if true;
+      allow read: if signedIn() && resource.data.userId == request.auth.uid;
+      allow update, delete: if false;
+    }
+    match /messages/{docId} {
+      allow create: if true;
+      allow read, update, delete: if false;
+    }
+    match /jobs/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}
