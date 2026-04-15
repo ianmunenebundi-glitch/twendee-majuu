@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css" />
+<title>Consultation Application | Twendee Majuu</title>
+</head>
+<body data-page="consultation">
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">TM</span>
+      <span><strong>Twendee Majuu</strong><small>Nairobi, Kenya</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="consultation.html">Consultation</a>
+      <a href="visa-support.html">Visa Support</a>
+      <a href="book-appointment.html">Book Appointment</a>
+      <a href="contact.html">Contact / WhatsApp</a>
+      <a href="dashboard.html" data-auth-only>Dashboard</a>
+      <a href="login.html" id="loginNavLink">Login</a>
+      <button class="btn btn-small btn-outline hidden" id="logoutBtn" type="button">Logout</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-hero"><div class="container narrow"><span class="eyebrow">Public Page</span><h1>Consultation Application</h1><p>Applicants can submit a consultation request here. Signed-in users will later see it in their status and appointment history.</p></div></section>
+  <section class="section"><div class="container form-wrap"><form id="consultationForm" class="card form-card">
+    <div class="form-grid">
+      <label>Full Name<input type="text" name="fullName" required /></label>
+      <label>Email<input type="email" name="email" required /></label>
+      <label>Phone Number<input type="tel" name="phone" required /></label>
+      <label>Current Location<input type="text" name="location" value="Nairobi, Kenya" required /></label>
+      <label>Destination Country<input type="text" name="destinationCountry" required /></label>
+      <label>Travel Purpose<select name="travelPurpose" required><option value="">Select</option><option>Work</option><option>Visit / Tourist</option><option>Business</option><option>Study</option></select></label>
+      <label>Preferred Date<input type="date" name="preferredDate" required /></label>
+      <label>Preferred Time<input type="time" name="preferredTime" required /></label>
+    </div>
+    <label>What help do you need most?<textarea name="message" rows="5" required placeholder="Briefly explain your goal and current stage."></textarea></label>
+    <div class="form-actions"><button class="btn btn-primary" type="submit">Submit Consultation Request</button><p class="muted">Best used while logged in.</p></div>
+  </form></div></section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Twendee Majuu</h3>
+      <p>Helping Kenyans travel abroad safely with trusted guidance, document support, and transparent processes.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="consultation.html">Consultation Application</a></li>
+        <li><a href="visa-support.html">Visa Support Form</a></li>
+        <li><a href="book-appointment.html">Book Appointment</a></li>
+        <li><a href="login.html">Applicant Login</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Nairobi, Kenya</li>
+        <li><a href="mailto:hello@twendeemajuu.com">hello@twendeemajuu.com</a></li>
+        <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© 2026 Twendee Majuu. GitHub Pages + Firebase starter.</small>
+  </div>
+</footer>
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

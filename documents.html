@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css" />
+<title>My Documents | Twendee Majuu</title>
+</head>
+<body data-page="documents" data-protected="true">
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">TM</span>
+      <span><strong>Twendee Majuu</strong><small>Nairobi, Kenya</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="consultation.html">Consultation</a>
+      <a href="visa-support.html">Visa Support</a>
+      <a href="book-appointment.html">Book Appointment</a>
+      <a href="contact.html">Contact / WhatsApp</a>
+      <a href="dashboard.html" data-auth-only>Dashboard</a>
+      <a href="login.html" id="loginNavLink">Login</a>
+      <button class="btn btn-small btn-outline hidden" id="logoutBtn" type="button">Logout</button>
+    </nav>
+  </div>
+</header>
+<main class="section"><div class="container dashboard-layout"><aside class="dashboard-sidebar card">
+  <h3>Applicant Area</h3>
+  <nav class="dashboard-nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="cv.html">My CV</a>
+    <a href="documents.html">My Documents</a>
+    <a href="status.html">My Status</a>
+    <a href="appointments.html">My Appointments</a>
+    <a href="jobs.html">Jobs Available</a>
+  </nav>
+</aside><section class="dashboard-main"><div class="section-heading"><div><span class="eyebrow">Private Page</span><h1>My Documents</h1><p>Upload passport scans, CVs, certificates, and supporting files to Firebase Storage.</p></div></div><form id="documentsForm" class="card form-card compact-form"><label>Document Type<select name="documentType" required><option value="">Select</option><option>Passport</option><option>CV</option><option>Certificate</option><option>ID / National ID</option><option>Other Supporting Document</option></select></label><label>Choose File<input type="file" name="documentFile" required /></label><button class="btn btn-primary" type="submit">Upload Document</button><p class="muted">Each upload also creates a metadata record in Firestore.</p></form><div class="card top-space"><h2>Uploaded files</h2><div id="documentsList" class="list-stack"></div></div></section></div></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Twendee Majuu</h3>
+      <p>Helping Kenyans travel abroad safely with trusted guidance, document support, and transparent processes.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="consultation.html">Consultation Application</a></li>
+        <li><a href="visa-support.html">Visa Support Form</a></li>
+        <li><a href="book-appointment.html">Book Appointment</a></li>
+        <li><a href="login.html">Applicant Login</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Nairobi, Kenya</li>
+        <li><a href="mailto:hello@twendeemajuu.com">hello@twendeemajuu.com</a></li>
+        <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© 2026 Twendee Majuu. GitHub Pages + Firebase starter.</small>
+  </div>
+</footer>
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
