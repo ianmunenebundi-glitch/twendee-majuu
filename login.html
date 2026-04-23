@@ -1,70 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css" />
-<title>Applicant Login | Twendee Majuu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Twendee Majuu</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body data-page="login">
-<header class="site-header">
-  <div class="container nav-wrap">
-   <a class="brand" href="index.html">
-  <img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="brand-logo">
-  <span><strong>Twendee Majuu</strong><small>Travel Safely &amp; Honestly</small></span>
-</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="consultation.html">Consultation</a>
-      <a href="visa-support.html">Visa Support</a>
-      <a href="book-appointment.html">Book Appointment</a>
-      <a href="contact.html">Contact / WhatsApp</a>
-      <a href="dashboard.html" data-auth-only>Dashboard</a>
-      <a href="login.html" id="loginNavLink">Login</a>
-      <button class="btn btn-small btn-outline hidden" id="logoutBtn" type="button">Logout</button>
-    </nav>
-  </div>
-</header>
-<main>
-  <section class="page-hero"><div class="container narrow"><span class="eyebrow">Applicant Portal</span><h1>Login or create an account</h1><p>Applicants use Firebase Authentication with email and password sign-in.</p></div></section>
-  <section class="section"><div class="container auth-grid">
-    <form id="loginForm" class="card form-card compact-form"><h2>Login</h2><label>Email<input type="email" name="email" required /></label><label>Password<input type="password" name="password" required /></label><button class="btn btn-primary" type="submit">Sign In</button></form>
-    <form id="signupForm" class="card form-card compact-form"><h2>Create account</h2><label>Full Name<input type="text" name="fullName" required /></label><label>Email<input type="email" name="email" required /></label><label>Phone Number<input type="tel" name="phone" required /></label><label>Password<input type="password" name="password" minlength="6" required /></label><button class="btn btn-outline" type="submit">Create Account</button></form>
-  </div></section>
-</main>
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>Twendee Majuu</h3>
-      <p>Helping Kenyans travel abroad safely with trusted guidance, document support, and transparent processes.</p>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="brand-logo" />
+        <span>
+          <strong>Twendee Majuu</strong>
+          <small>Travel Safely &amp; Honestly</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="jobs.html">Jobs Abroad</a>
+        <a href="visa-support.html">Visa Application</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="book-appointment.html">Book Appointment</a>
+        <a href="contact.html">Contact / WhatsApp</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html" class="active">Login</a>
+      </nav>
     </div>
-    <div>
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="consultation.html">Consultation Application</a></li>
-        <li><a href="visa-support.html">Visa Support Form</a></li>
-        <li><a href="book-appointment.html">Book Appointment</a></li>
-        <li><a href="login.html">Applicant Login</a></li>
-      </ul>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Applicant Login</h1>
+      <p>
+        Log in to your Twendee Majuu account or create a new account to manage your applications.
+      </p>
     </div>
-    <div>
-      <h4>Contact</h4>
-      <ul>
-        <li>Nairobi, Kenya</li>
-        <li><a href="mailto:hello@twendeemajuu.com">hello@twendeemajuu.com</a></li>
-        <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp Us</a></li>
-      </ul>
+  </section>
+
+  <main class="section">
+    <div class="container">
+
+      <div class="grid-2">
+        <div class="form-card">
+          <h3>Login</h3>
+          <p class="lead">Access your dashboard, documents, status, and appointments.</p>
+
+          <form id="loginForm">
+            <div class="form-grid">
+              <div class="form-group full">
+                <label for="loginEmail">Email Address</label>
+                <input type="email" id="loginEmail" name="email" required />
+              </div>
+
+              <div class="form-group full">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="password" required />
+              </div>
+            </div>
+
+            <div class="btn-row" style="margin-top: 24px;">
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-card">
+          <h3>Create Account</h3>
+          <p class="lead">Create your applicant account to save your information and track progress.</p>
+
+          <form id="signupForm">
+            <div class="form-grid">
+              <div class="form-group full">
+                <label for="signupFullName">Full Name</label>
+                <input type="text" id="signupFullName" name="fullName" required />
+              </div>
+
+              <div class="form-group full">
+                <label for="signupPhone">Phone Number</label>
+                <input type="tel" id="signupPhone" name="phone" required />
+              </div>
+
+              <div class="form-group full">
+                <label for="signupEmail">Email Address</label>
+                <input type="email" id="signupEmail" name="email" required />
+              </div>
+
+              <div class="form-group full">
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" name="password" required />
+              </div>
+            </div>
+
+            <div class="btn-row" style="margin-top: 24px;">
+              <button type="submit" class="btn btn-primary">Create Account</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
     </div>
-  </div>
-  <div class="container footer-bottom">
-    <small>© 2026 Twendee Majuu. GitHub Pages + Firebase starter.</small>
-  </div>
-</footer>
-<script type="module" src="assets/js/main.js"></script>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; 2026 Twendee Majuu. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
