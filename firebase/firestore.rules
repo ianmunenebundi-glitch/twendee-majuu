@@ -1,45 +1,94 @@
 rules_version = '2';
+
 service cloud.firestore {
   match /databases/{database}/documents {
+
     function signedIn() {
       return request.auth != null;
     }
-    function isOwner(uid) {
-      return signedIn() && request.auth.uid == uid;
+
+    function isOwner(userId) {
+      return signedIn() && request.auth.uid == userId;
     }
 
+    /* =========================
+       USER PROFILE
+    ========================= */
     match /users/{userId} {
-      allow read, write: if isOwner(userId);
+      allow read, update: if isOwner(userId);
+      allow create: if signedIn() && request.auth.uid == userId;
+      allow delete: if false;
     }
+
+    /* =========================
+       CVS
+    ========================= */
     match /cvs/{userId} {
-      allow read, write: if isOwner(userId);
+      allow read, update: if isOwner(userId);
+      allow create: if signedIn() && request.auth.uid == userId;
+      allow delete: if false;
     }
+
+    /* =========================
+       DOCUMENTS
+    ========================= */
     match /documents/{docId} {
+      allow read: if signedIn() && resource.data.userId == request.auth.uid;
       allow create: if signedIn() && request.resource.data.userId == request.auth.uid;
-      allow read, update, delete: if signedIn() && resource.data.userId == request.auth.uid;
+      allow update: if signedIn() && resource.data.userId == request.auth.uid;
+      allow delete: if signedIn() && resource.data.userId == request.auth.uid;
     }
+
+    /* =========================
+       CONSULTATIONS
+    ========================= */
     match /consultations/{docId} {
       allow create: if true;
       allow read: if signedIn() && resource.data.userId == request.auth.uid;
       allow update, delete: if false;
     }
+
+    /* =========================
+       VISA APPLICATIONS
+    ========================= */
     match /visaApplications/{docId} {
       allow create: if true;
       allow read: if signedIn() && resource.data.userId == request.auth.uid;
       allow update, delete: if false;
     }
+
+    /* =========================
+       APPOINTMENTS
+    ========================= */
     match /appointments/{docId} {
       allow create: if true;
       allow read: if signedIn() && resource.data.userId == request.auth.uid;
       allow update, delete: if false;
     }
+
+    /* =========================
+       APPLY NOW FORM
+    ========================= */
+    match /applications/{docId} {
+      allow create: if true;
+      allow read: if signedIn() && resource.data.userId == request.auth.uid;
+      allow update, delete: if false;
+    }
+
+    /* =========================
+       CONTACT MESSAGES
+    ========================= */
     match /messages/{docId} {
       allow create: if true;
       allow read, update, delete: if false;
     }
+
+    /* =========================
+       JOBS
+    ========================= */
     match /jobs/{docId} {
       allow read: if true;
-      allow write: if false;
+      allow create, update, delete: if false;
     }
   }
 }
