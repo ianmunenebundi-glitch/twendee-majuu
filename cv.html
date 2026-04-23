@@ -1,74 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css" />
-<title>My CV | Twendee Majuu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My CV | Twendee Majuu</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body data-page="cv" data-protected="true">
-<header class="site-header">
-  <div class="container nav-wrap">
-   <a class="brand" href="index.html">
-  <img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="brand-logo">
-  <span><strong>Twendee Majuu</strong><small>Travel Safely &amp; Honestly</small></span>
-</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="consultation.html">Consultation</a>
-      <a href="visa-support.html">Visa Support</a>
-      <a href="book-appointment.html">Book Appointment</a>
-      <a href="contact.html">Contact / WhatsApp</a>
-      <a href="dashboard.html" data-auth-only>Dashboard</a>
-      <a href="login.html" id="loginNavLink">Login</a>
-      <button class="btn btn-small btn-outline hidden" id="logoutBtn" type="button">Logout</button>
-    </nav>
-  </div>
-</header>
-<main class="section"><div class="container dashboard-layout"><aside class="dashboard-sidebar card">
-  <h3>Applicant Area</h3>
-  <nav class="dashboard-nav">
-    <a href="dashboard.html">Dashboard</a>
-    <a href="cv.html">My CV</a>
-    <a href="documents.html">My Documents</a>
-    <a href="status.html">My Status</a>
-    <a href="appointments.html">My Appointments</a>
-    <a href="jobs.html">Jobs Available</a>
-  </nav>
-</aside><section class="dashboard-main"><div class="section-heading"><div><span class="eyebrow">Private Page</span><h1>My CV</h1><p>Create and save a complete applicant profile that can later be exported or reviewed by the Twendee Majuu team.</p></div></div><form id="cvForm" class="card form-card"><div class="form-grid"><label>Full Name<input type="text" name="fullName" required /></label><label>Professional Title<input type="text" name="professionalTitle" placeholder="Example: General Worker / Driver / Chef" /></label><label>Phone Number<input type="tel" name="phone" required /></label><label>Email<input type="email" name="email" required /></label><label>Date of Birth<input type="date" name="dateOfBirth" /></label><label>Nationality<input type="text" name="nationality" value="Kenyan" /></label></div><label>Profile Summary<textarea name="summary" rows="4"></textarea></label><label>Education<textarea name="education" rows="4"></textarea></label><label>Work Experience<textarea name="experience" rows="5"></textarea></label><label>Skills<textarea name="skills" rows="4"></textarea></label><label>References<textarea name="references" rows="4"></textarea></label><button class="btn btn-primary" type="submit">Save CV</button></form></section></div></main>
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>Twendee Majuu</h3>
-      <p>Helping Kenyans travel abroad safely with trusted guidance, document support, and transparent processes.</p>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="brand-logo" />
+        <span>
+          <strong>Twendee Majuu</strong>
+          <small>Travel Safely &amp; Honestly</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="jobs.html">Jobs Abroad</a>
+        <a href="visa-support.html">Visa Application</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="book-appointment.html">Book Appointment</a>
+        <a href="contact.html">Contact / WhatsApp</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html" id="loginNavLink">Login</a>
+        <button type="button" id="logoutBtn" class="btn btn-outline hidden">Logout</button>
+      </nav>
     </div>
-    <div>
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="consultation.html">Consultation Application</a></li>
-        <li><a href="visa-support.html">Visa Support Form</a></li>
-        <li><a href="book-appointment.html">Book Appointment</a></li>
-        <li><a href="login.html">Applicant Login</a></li>
-      </ul>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>My CV</h1>
+      <p>
+        Fill in your CV details so Twendee Majuu can help you apply for jobs abroad more effectively.
+      </p>
     </div>
-    <div>
-      <h4>Contact</h4>
-      <ul>
-        <li>Nairobi, Kenya</li>
-        <li><a href="mailto:hello@twendeemajuu.com">hello@twendeemajuu.com</a></li>
-        <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp Us</a></li>
-      </ul>
+  </section>
+
+  <main class="section">
+    <div class="container">
+
+      <div class="card">
+        <span class="badge">CV Builder</span>
+        <h3>Personal and professional details</h3>
+        <p>
+          Complete your CV profile below. You can update it any time from your dashboard.
+        </p>
+      </div>
+
+      <div class="form-card" style="margin-top: 24px;">
+        <form id="cvForm">
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="nationality">Nationality</label>
+              <input type="text" id="nationality" name="nationality" placeholder="Example: Kenyan" />
+            </div>
+
+            <div class="form-group">
+              <label for="passportNumber">Passport Number</label>
+              <input type="text" id="passportNumber" name="passportNumber" />
+            </div>
+
+            <div class="form-group">
+              <label for="jobTitle">Preferred Job Title</label>
+              <input type="text" id="jobTitle" name="jobTitle" placeholder="Example: Warehouse Worker" />
+            </div>
+
+            <div class="form-group full">
+              <label for="profileSummary">Profile Summary</label>
+              <textarea id="profileSummary" name="profileSummary" placeholder="Write a short summary about yourself, your experience, and your strengths."></textarea>
+            </div>
+
+            <div class="form-group full">
+              <label for="education">Education</label>
+              <textarea id="education" name="education" placeholder="List your education background."></textarea>
+            </div>
+
+            <div class="form-group full">
+              <label for="workExperience">Work Experience</label>
+              <textarea id="workExperience" name="workExperience" placeholder="List your previous work experience."></textarea>
+            </div>
+
+            <div class="form-group full">
+              <label for="skills">Skills</label>
+              <textarea id="skills" name="skills" placeholder="Example: Driving, customer service, cleaning, warehouse work, caregiving, computer skills"></textarea>
+            </div>
+
+            <div class="form-group full">
+              <label for="languages">Languages</label>
+              <textarea id="languages" name="languages" placeholder="Example: English, Swahili"></textarea>
+            </div>
+
+            <div class="form-group full">
+              <label for="references">References</label>
+              <textarea id="references" name="references" placeholder="Add your references if available."></textarea>
+            </div>
+
+          </div>
+
+          <div class="btn-row" style="margin-top: 24px;">
+            <button type="submit" class="btn btn-primary">Save CV</button>
+            <a href="dashboard.html" class="btn btn-outline">Back to Dashboard</a>
+          </div>
+        </form>
+      </div>
+
     </div>
-  </div>
-  <div class="container footer-bottom">
-    <small>© 2026 Twendee Majuu. GitHub Pages + Firebase starter.</small>
-  </div>
-</footer>
-<script type="module" src="assets/js/main.js"></script>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; 2026 Twendee Majuu. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
