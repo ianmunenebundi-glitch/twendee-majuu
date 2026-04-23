@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css" />
-<title>Twendee Majuu | Safe Travel Abroad Support</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twendee Majuu | Travel Safely &amp; Honestly</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body data-page="home">
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="index.html">
-  <img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="brand-logo">
-  <span><strong>Twendee Majuu</strong><small>Travel Safely &amp; Honestly</small></span>
-</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="consultation.html">Consultation</a>
-      <a href="visa-support.html">Visa Support</a>
-      <a href="book-appointment.html">Book Appointment</a>
-      <a href="contact.html">Contact / WhatsApp</a>
-      <a href="dashboard.html" data-auth-only>Dashboard</a>
-      <a href="login.html" id="loginNavLink">Login</a>
-      <button class="btn btn-small btn-outline hidden" id="logoutBtn" type="button">Logout</button>
-    </nav>
-  </div>
-</header>
-<main>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="brand-logo" />
+        <span>
+          <strong>Twendee Majuu</strong>
+          <small>Travel Safely &amp; Honestly</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="jobs.html">Jobs Abroad</a>
+        <a href="visa-support.html">Visa Application</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="book-appointment.html">Book Appointment</a>
+        <a href="contact.html">Contact / WhatsApp</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
   <section class="hero">
     <div class="container hero-grid">
       <div>
-       <span class="eyebrow">Trusted travel guidance from Nairobi, Kenya</span>
-<img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="hero-logo">
-<h1>Helping Kenyans travel abroad safely, confidently, and with the right support.</h1>
-        <p>Twendee Majuu is your web app for consultation requests, visa support forms, applicant login, document uploads, status tracking, appointment history, jobs available, and CV management.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="consultation.html">Apply for Consultation</a>
-          <a class="btn btn-outline" href="login.html">Applicant Login</a>
+        <span class="eyebrow">Trusted travel guidance from Nairobi, Kenya</span>
+        <img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="hero-logo" />
+
+        <h1>Helping Kenyans travel abroad safely, honestly, and with the right support.</h1>
+
+        <p>
+          Twendee Majuu is a trusted platform based in Nairobi, Kenya helping Kenyans
+          access jobs abroad, visa application support, consultation, and proper travel guidance.
+        </p>
+
+        <div class="btn-row">
+          <a href="consultation.html" class="btn btn-primary">Apply for Consultation</a>
+          <a href="apply-now.html" class="btn btn-outline">Apply Now</a>
+          <a href="login.html" class="btn btn-outline">Applicant Login</a>
+        </div>
       </div>
-      </div>
-      <div class="card hero-card">
-        <h3>Applicant features</h3>
-        <ul class="check-list">
-          <li>Create account and sign in</li>
-          <li>Request consultation</li>
-          <li>Submit visa support details</li>
-          <li>Upload passport, CV, and certificates</li>
-          <li>Track application status and appointments</li>
-          <li>Browse jobs available</li>
+
+      <div class="hero-card">
+        <span class="badge">Who We Are</span>
+        <h3>Twendee Majuu</h3>
+        <p>
+          We help Kenyans travel abroad through clear guidance, proper document support,
+          and genuine pathways for jobs, visit visas, business travel, work visas, and study opportunities.
+        </p>
+
+        <ul class="clean">
+          <li>Based in Nairobi, Kenya</li>
+          <li>Jobs Abroad support</li>
+          <li>Visa Application support</li>
+          <li>Consultation and travel guidance</li>
+          <li>Honest process and safe preparation</li>
         </ul>
       </div>
     </div>
@@ -59,76 +73,143 @@
 
   <section class="section">
     <div class="container">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">Public Pages</span>
-          <h2>What this starter includes</h2>
-        </div>
-      </div>
-      <div class="feature-grid">
-        <article class="card"><h3>Home</h3><p>Brand intro, services, and live job previews.</p></article>
-        <article class="card"><h3>About</h3><p>Your mission, promise, and trust message.</p></article>
-        <article class="card"><h3>Consultation</h3><p>Applicants request guidance with date and time.</p></article>
-        <article class="card"><h3>Visa Support</h3><p>Collect purpose, passport status, travel history, and notes.</p></article>
-        <article class="card"><h3>Book Appointment</h3><p>Save bookings to appointment history.</p></article>
-        <article class="card"><h3>Contact / WhatsApp</h3><p>Direct contact plus a quick Firestore message form.</p></article>
-      </div>
-    </div>
-  </section>
+      <h2>Why choose Twendee Majuu?</h2>
+      <p class="lead">
+        We believe travel abroad should be guided by truth, preparation, and a clear process.
+      </p>
 
-  <section class="section section-soft">
-    <div class="container">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">Latest jobs</span>
-          <h2>Preview available opportunities</h2>
-          <p>These cards load from Firestore. Applicants can see the full list after login.</p>
+      <div class="grid-3">
+        <div class="card">
+          <span class="badge">Trusted Support</span>
+          <h3>Safe and honest guidance</h3>
+          <p>
+            We help applicants understand real opportunities and avoid confusion, pressure, and wrong processes.
+          </p>
         </div>
-        <a class="btn btn-outline" href="jobs.html">Open Jobs Page</a>
+
+        <div class="card">
+          <span class="badge">Applicant Friendly</span>
+          <h3>Simple digital process</h3>
+          <p>
+            From applications to future dashboard features, we are building a system that helps applicants move clearly.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge">Kenyan Focus</span>
+          <h3>Built for Kenyans</h3>
+          <p>
+            Our platform is made for Kenyans willing to travel abroad for jobs, visits, business, and study opportunities.
+          </p>
+        </div>
       </div>
-      <div id="homeJobsGrid" class="feature-grid"></div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container cta-banner">
-      <div>
-        <span class="eyebrow">Private Applicant Area</span>
-        <h2>Manage everything from one dashboard.</h2>
-        <p>After login, applicants can complete their CV, upload documents, see appointments, and monitor status updates.</p>
+    <div class="container">
+      <h2>Explore Opportunities with Twendee Majuu</h2>
+      <p class="lead">
+        We help Kenyans access jobs abroad and get proper visa application support for travel, business, work, and study opportunities.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <span class="badge">Jobs Abroad</span>
+          <h3>Work opportunities in Europe and the Middle East</h3>
+          <p>
+            Twendee Majuu shares job opportunities for Kenyans willing to travel abroad and work through the right process.
+          </p>
+
+          <ul class="clean">
+            <li><strong>Europe:</strong> Serbia, Germany, UK, Ireland, Cyprus, Albania</li>
+            <li><strong>Middle East:</strong> UAE (Dubai), Qatar, Saudi Arabia, Turkey, Oman, Kuwait</li>
+            <li>Direct jobs and interview-based opportunities</li>
+            <li>Job application support</li>
+          </ul>
+
+          <div class="btn-row">
+            <a href="jobs.html" class="btn btn-primary">View Jobs Abroad</a>
+            <a href="apply-now.html?type=job" class="btn btn-outline">Apply Now</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge">Visa Application</span>
+          <h3>Visit, business, work, and study visa support</h3>
+          <p>
+            We guide applicants with proper document preparation and application support for genuine travel goals.
+          </p>
+
+          <ul class="clean">
+            <li><strong>Visa Types:</strong> Visit, Business, Work, Study</li>
+            <li><strong>Destinations:</strong> Australia, USA, Canada</li>
+            <li><strong>Education Support:</strong> Study abroad guidance and scholarship guidance</li>
+            <li>Clear process, document guidance, and consultation</li>
+          </ul>
+
+          <div class="btn-row">
+            <a href="visa-support.html" class="btn btn-primary">Visa Application</a>
+            <a href="apply-now.html?type=visa" class="btn btn-outline">Apply Now</a>
+          </div>
+        </div>
       </div>
-      <a class="btn btn-primary" href="login.html">Get Started</a>
     </div>
   </section>
-</main>
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>Twendee Majuu</h3>
-      <p>Helping Kenyans travel abroad safely with trusted guidance, document support, and transparent processes.</p>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <div>
+          <h3>Ready to begin your journey?</h3>
+          <p>
+            Start with trusted support from Nairobi, Kenya and let Twendee Majuu guide your next step abroad.
+          </p>
+        </div>
+
+        <div class="btn-row">
+          <a href="apply-now.html" class="btn btn-primary">Apply Now</a>
+          <a href="consultation.html" class="btn btn-outline">Book Consultation</a>
+        </div>
+      </div>
     </div>
-    <div>
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="consultation.html">Consultation Application</a></li>
-        <li><a href="visa-support.html">Visa Support Form</a></li>
-        <li><a href="book-appointment.html">Book Appointment</a></li>
-        <li><a href="login.html">Applicant Login</a></li>
-      </ul>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Twendee Majuu</h4>
+          <p>
+            Travel Safely &amp; Honestly. Helping Kenyans travel abroad with trusted guidance from Nairobi, Kenya.
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="clean">
+            <li><a href="jobs.html">Jobs Abroad</a></li>
+            <li><a href="visa-support.html">Visa Application</a></li>
+            <li><a href="consultation.html">Consultation</a></li>
+            <li><a href="login.html">Applicant Login</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul class="clean">
+            <li><a href="contact.html">Contact / WhatsApp</a></li>
+            <li>Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Twendee Majuu. All rights reserved.
+      </div>
     </div>
-    <div>
-      <h4>Contact</h4>
-      <ul>
-        <li>Nairobi, Kenya</li>
-        <li><a href="mailto:hello@twendeemajuu.com">hello@twendeemajuu.com</a></li>
-        <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp Us</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <small>© 2026 Twendee Majuu. GitHub Pages + Firebase starter.</small>
-  </div>
-</footer>
-<script type="module" src="assets/js/main.js"></script>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
