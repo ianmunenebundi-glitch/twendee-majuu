@@ -1,74 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css" />
-<title>My Status | Twendee Majuu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Status | Twendee Majuu</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body data-page="status" data-protected="true">
-<header class="site-header">
-  <div class="container nav-wrap">
- <a class="brand" href="index.html">
-  <img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="brand-logo">
-  <span><strong>Twendee Majuu</strong><small>Travel Safely &amp; Honestly</small></span>
-</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="consultation.html">Consultation</a>
-      <a href="visa-support.html">Visa Support</a>
-      <a href="book-appointment.html">Book Appointment</a>
-      <a href="contact.html">Contact / WhatsApp</a>
-      <a href="dashboard.html" data-auth-only>Dashboard</a>
-      <a href="login.html" id="loginNavLink">Login</a>
-      <button class="btn btn-small btn-outline hidden" id="logoutBtn" type="button">Logout</button>
-    </nav>
-  </div>
-</header>
-<main class="section"><div class="container dashboard-layout"><aside class="dashboard-sidebar card">
-  <h3>Applicant Area</h3>
-  <nav class="dashboard-nav">
-    <a href="dashboard.html">Dashboard</a>
-    <a href="cv.html">My CV</a>
-    <a href="documents.html">My Documents</a>
-    <a href="status.html">My Status</a>
-    <a href="appointments.html">My Appointments</a>
-    <a href="jobs.html">Jobs Available</a>
-  </nav>
-</aside><section class="dashboard-main"><div class="section-heading"><div><span class="eyebrow">Private Page</span><h1>My Status</h1><p>See consultation and visa support requests with live progress updates from Firestore.</p></div></div><div id="statusList" class="list-stack"></div></section></div></main>
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>Twendee Majuu</h3>
-      <p>Helping Kenyans travel abroad safely with trusted guidance, document support, and transparent processes.</p>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="brand-logo" />
+        <span>
+          <strong>Twendee Majuu</strong>
+          <small>Travel Safely &amp; Honestly</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="jobs.html">Jobs Abroad</a>
+        <a href="visa-support.html">Visa Application</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="book-appointment.html">Book Appointment</a>
+        <a href="contact.html">Contact / WhatsApp</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html" id="loginNavLink">Login</a>
+        <button type="button" id="logoutBtn" class="btn btn-outline hidden">Logout</button>
+      </nav>
     </div>
-    <div>
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="consultation.html">Consultation Application</a></li>
-        <li><a href="visa-support.html">Visa Support Form</a></li>
-        <li><a href="book-appointment.html">Book Appointment</a></li>
-        <li><a href="login.html">Applicant Login</a></li>
-      </ul>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>My Status</h1>
+      <p>
+        Track your consultation requests, visa support requests, and Apply Now submissions in one place.
+      </p>
     </div>
-    <div>
-      <h4>Contact</h4>
-      <ul>
-        <li>Nairobi, Kenya</li>
-        <li><a href="mailto:hello@twendeemajuu.com">hello@twendeemajuu.com</a></li>
-        <li><a href="https://wa.me/254700000000" target="_blank" rel="noopener">WhatsApp Us</a></li>
-      </ul>
+  </section>
+
+  <main class="section">
+    <div class="container">
+
+      <div class="card">
+        <span class="badge">Application Tracking</span>
+        <h3>Your current progress</h3>
+        <p>
+          This page shows the status of your requests as updated inside the Twendee Majuu system.
+        </p>
+      </div>
+
+      <div class="card" style="margin-top: 24px;">
+        <div id="statusList"></div>
+      </div>
+
+      <div class="cta-banner" style="margin-top: 24px;">
+        <div>
+          <h3>Need to add more information?</h3>
+          <p>
+            Update your CV, upload documents, or contact Twendee Majuu if your application needs more support.
+          </p>
+        </div>
+
+        <div class="btn-row">
+          <a href="cv.html" class="btn btn-primary">Update CV</a>
+          <a href="documents.html" class="btn btn-outline">Upload Documents</a>
+        </div>
+      </div>
+
     </div>
-  </div>
-  <div class="container footer-bottom">
-    <small>© 2026 Twendee Majuu. GitHub Pages + Firebase starter.</small>
-  </div>
-</footer>
-<script type="module" src="assets/js/main.js"></script>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; 2026 Twendee Majuu. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
