@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply Now | Twendee Majuu</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="apply-now">
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/images/twendee-majuu-logo.png" alt="Twendee Majuu logo" class="brand-logo" />
+        <span>
+          <strong>Twendee Majuu</strong>
+          <small>Travel Safely &amp; Honestly</small>
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="jobs.html">Jobs Abroad</a>
+        <a href="visa-support.html">Visa Application</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="book-appointment.html">Book Appointment</a>
+        <a href="contact.html">Contact / WhatsApp</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Apply Now</h1>
+      <p>
+        Fill in your details below and Twendee Majuu will review your application.
+      </p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container">
+      <div class="form-card">
+        <form id="applyNowForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Name</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="passportNumber">Passport Number</label>
+              <input type="text" id="passportNumber" name="passportNumber" required />
+            </div>
+
+            <div class="form-group">
+              <label for="applicationType">Visa or Job</label>
+              <select id="applicationType" name="applicationType" required>
+                <option value="">Select</option>
+                <option value="Job">Job</option>
+                <option value="Visa">Visa</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+
+            <div class="form-group">
+              <label for="countrySelect">Country</label>
+              <select id="countrySelect" name="country" required>
+                <option value="">Select Country</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="notes">Notes</label>
+              <textarea id="notes" name="notes" placeholder="Tell us briefly what you need help with."></textarea>
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top: 24px;">
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; 2026 Twendee Majuu. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
