@@ -10,13 +10,14 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-s
 */
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
-};
+  apiKey: "AIzaSyDuk19ymmXm5B8rVlK0eE4pBjhhguo3f38",
+  authDomain: "twendee-majuu.firebaseapp.com",
+  projectId: "twendee-majuu",
+  storageBucket: "twendee-majuu.firebasestorage.app",
+  messagingSenderId: "533029287364",
+  appId: "1:533029287364:web:e83bc9409b893f0579a091",
+  measurementId: "G-V33D22H06K"
+    };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
