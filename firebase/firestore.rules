@@ -11,51 +11,85 @@ service cloud.firestore {
       return signedIn() && request.auth.uid == userId;
     }
 
+    /* =========================
+       USERS
+    ========================= */
     match /users/{userId} {
       allow create: if isOwner(userId);
       allow read, update: if isOwner(userId);
       allow delete: if false;
     }
 
+    /* =========================
+       CVS
+    ========================= */
     match /cvs/{userId} {
       allow create: if isOwner(userId);
       allow read, update: if isOwner(userId);
       allow delete: if false;
     }
 
+    /* =========================
+       DOCUMENTS
+    ========================= */
     match /documents/{docId} {
       allow create: if signedIn() && request.resource.data.userId == request.auth.uid;
       allow read, update, delete: if signedIn() && resource.data.userId == request.auth.uid;
     }
 
+    /* =========================
+       CONSULTATIONS
+    ========================= */
     match /consultations/{docId} {
       allow create: if true;
       allow read: if signedIn() && resource.data.userId == request.auth.uid;
       allow update, delete: if false;
     }
 
+    /* =========================
+       VISA APPLICATIONS
+    ========================= */
     match /visaApplications/{docId} {
       allow create: if true;
       allow read: if signedIn() && resource.data.userId == request.auth.uid;
       allow update, delete: if false;
     }
 
+    /* =========================
+       APPOINTMENTS
+    ========================= */
     match /appointments/{docId} {
       allow create: if true;
       allow read: if signedIn() && resource.data.userId == request.auth.uid;
       allow update, delete: if false;
     }
 
+    /* =========================
+       APPLY NOW
+    ========================= */
     match /applications/{docId} {
       allow create: if true;
       allow read: if signedIn() && resource.data.userId == request.auth.uid;
       allow update, delete: if false;
     }
 
+    /* =========================
+       CONTACT MESSAGES
+    ========================= */
     match /messages/{docId} {
       allow create: if true;
       allow read, update, delete: if false;
     }
+
+    /* =========================
+       JOBS
+    ========================= */
+    match /jobs/{docId} {
+      allow read: if true;
+      allow create, update, delete: if false;
+    }
+  }
+}
 
     match /jobs/{docId} {
       allow read: if true;
